@@ -22,7 +22,6 @@ namespace InterviewTask.Controllers
         public ActionResult Index()
         {
             var model = new HelperServiceViewModel();
-            int u = Convert.ToInt32("");// Error line  
 
             model.HelperServices = helperServiceCardService.Get();
 
@@ -39,10 +38,5 @@ namespace InterviewTask.Controllers
 
             return View("Index", model);
         }
-
-        //public ActionResult Error()
-        //{
-        //    return View();
-        //}
     }
 }

@@ -72,8 +72,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetCurrentWeather\WeatherServiceMappingTests.cs" />
-    <Compile Include="GetCurrentWeather\WeatherServiceRetreivalFlagsTests.cs" />
+    <Compile Include="GetCurrentWeather\MappingTests.cs" />
+    <Compile Include="GetCurrentWeather\ExceptionTests.cs" />
+    <Compile Include="GetCurrentWeather\RetreivalFlagsTests.cs" />
     <Compile Include="Helpers\Mocks\MockConfig.cs" />
     <Compile Include="MapHelperServiceCard\OpeningTimeMessageTests.cs" />
     <Compile Include="MapHelperServiceCard\ClosingTimeMessageTests.cs" />

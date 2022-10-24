@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace InterviewTask.UnitTests.GetCurrentWeather
 {
     [TestClass]
-    public class WeatherServiceRetreivalFlagsTests
+    public class RetreivalFlagsTests
     {
         [TestMethod]
         [Description("Does GetCurrentWeatherAsync Correctly Set WeatherRetieval Flags When Weather Is Returned")]

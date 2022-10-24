@@ -1,9 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.28803.452
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTask", "InterviewTask\InterviewTask.csproj", "{F170B98A-622D-4289-9A5F-70512BA7FA3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTask.UnitTests", "InterviewTask.UnitTests\InterviewTask.UnitTests.csproj", "{4817850C-4D23-47A0-9EE7-412AB36264B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTask.Weather", "InterviewTask.OpenWeather\InterviewTask.Weather.csproj", "{87625791-30DE-4C8E-B429-C535DE6A703B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 - Tests", "00 - Tests", "{E22A03BB-881E-4B89-B3BE-99BD3393B2A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Data", "02 - Data", "{21EB700F-650A-49ED-B60D-380C7718C818}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - FrontEnd", "03 - FrontEnd", "{478B84DE-E311-41F9-9BF6-235265985C4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Infrastructure", "01 - Infrastructure", "{0F370EF1-6DDF-4A64-8D7E-39E5C7E357EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTask.Logging", "InterviewTask.Logging\InterviewTask.Logging.csproj", "{A1F699D6-E38F-4C91-AB55-710C1F706691}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterviewTask.HelperService", "InterviewTask.HelperService\InterviewTask.HelperService.csproj", "{43FEB0D1-DB03-4075-AD09-F6C58028209C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +31,32 @@ Global
 		{F170B98A-622D-4289-9A5F-70512BA7FA3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F170B98A-622D-4289-9A5F-70512BA7FA3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F170B98A-622D-4289-9A5F-70512BA7FA3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4817850C-4D23-47A0-9EE7-412AB36264B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4817850C-4D23-47A0-9EE7-412AB36264B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4817850C-4D23-47A0-9EE7-412AB36264B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4817850C-4D23-47A0-9EE7-412AB36264B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87625791-30DE-4C8E-B429-C535DE6A703B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87625791-30DE-4C8E-B429-C535DE6A703B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87625791-30DE-4C8E-B429-C535DE6A703B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87625791-30DE-4C8E-B429-C535DE6A703B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1F699D6-E38F-4C91-AB55-710C1F706691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1F699D6-E38F-4C91-AB55-710C1F706691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1F699D6-E38F-4C91-AB55-710C1F706691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1F699D6-E38F-4C91-AB55-710C1F706691}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43FEB0D1-DB03-4075-AD09-F6C58028209C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43FEB0D1-DB03-4075-AD09-F6C58028209C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43FEB0D1-DB03-4075-AD09-F6C58028209C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43FEB0D1-DB03-4075-AD09-F6C58028209C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F170B98A-622D-4289-9A5F-70512BA7FA3F} = {478B84DE-E311-41F9-9BF6-235265985C4C}
+		{4817850C-4D23-47A0-9EE7-412AB36264B0} = {E22A03BB-881E-4B89-B3BE-99BD3393B2A4}
+		{87625791-30DE-4C8E-B429-C535DE6A703B} = {21EB700F-650A-49ED-B60D-380C7718C818}
+		{A1F699D6-E38F-4C91-AB55-710C1F706691} = {0F370EF1-6DDF-4A64-8D7E-39E5C7E357EE}
+		{43FEB0D1-DB03-4075-AD09-F6C58028209C} = {21EB700F-650A-49ED-B60D-380C7718C818}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D2E3F465-170F-4B6A-8118-09473E6DFAC7}

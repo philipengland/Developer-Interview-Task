@@ -1,0 +1,33 @@
+﻿@model IEnumerable<InterviewTask.Models.HelperServiceCardModel>
+
+<section>
+    <div class="row">
+        <div class="col text-center  col-md-12 col-sm-12">
+            <button class="btn btn-donation-orange text-center" onclick="location.href='@Url.Action("GetWeather", "Home")'">Get Weather</button>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        @if (Model.Any() == true)
+        {
+            <div class="row">
+                @foreach (var helperServiceCard in Model)
+                {
+                    @Html.Partial("HelperService/HelperServiceCard", helperServiceCard)
+                }
+            </div>
+        }
+        else
+        {
+            <div class="row">
+                <div class="block richtextblock col-md-12 col-sm-12">
+                    <div class="block-inner text-center">
+                        <p>There are currently no Helper Services to display</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

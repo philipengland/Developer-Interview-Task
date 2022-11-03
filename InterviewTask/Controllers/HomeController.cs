@@ -34,7 +34,8 @@ namespace InterviewTask.Controllers
         {
             var model = new HelperServiceViewModel();
 
-            model.HelperServices = await helperServiceCardService.GetWithWeatherAsync();
+            model.HelperServices = helperServiceCardService.Get();
+            await helperServiceCardService.AddWeather(model.HelperServices);
 
             return View("Index", model);
         }

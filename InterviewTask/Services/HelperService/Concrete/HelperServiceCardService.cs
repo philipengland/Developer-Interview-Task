@@ -25,6 +25,8 @@ namespace InterviewTask.Services
             this.logger = logger;
         }
 
+
+
         /// <summary>
         /// Returns all Helper Service Cards for the Helper Service
         /// </summary>
@@ -49,37 +51,18 @@ namespace InterviewTask.Services
             return cardModels;
         }
 
-        /// <summary>
-        /// Returns all Helper Service Cards for the Helper Service
-        /// </summary>
-        /// <returns></returns>
-        public async Task<IEnumerable<HelperServiceCardModel>> GetWithWeatherAsync()
+        public async Task AddWeather(IEnumerable<HelperServiceCardModel> cards)
         {
-            var cardModels = new List<HelperServiceCardModel>();
-
-            var helperServiceModels = GetHelperServices();
-            if (helperServiceModels == null)
+            foreach (var card in cards)
             {
-                logger.LogWarning("HelperServiceCardService, GetWithWeatherAsync: No card models returned by Repository");
-                return cardModels;
-            }
-
-            foreach (var helperService in helperServiceModels)
-            {
-                if (string.IsNullOrEmpty(helperService?.Title)) { 
-                    logger.LogWarning("HelperServiceCardService, GetWithWeatherAsync: Card null or missing title"); 
-                    continue; 
+                if (string.IsNullOrEmpty(card?.Title))
+                {
+                    logger.LogWarning("HelperServiceCardService, GetWithWeatherAsync: Card null or missing title");
+                    continue;
                 }
 
-                var weatherTask = helperServiceWeatherService.GetCurrentWeatherAsync(helperService.Title.Replace(" Helper Service", ""));
-                var card = helperServiceCardHandler.MapHelperServiceCard(helperService);
-
-                card.WeatherForcast = await weatherTask;
-
-                cardModels.Add(card);
+                card.WeatherForcast = await helperServiceWeatherService.GetCurrentWeatherAsync(card.Title.Replace(" Helper Service", ""));
             }
-
-            return cardModels;
         }
 
         private IEnumerable<HelperServiceModel> GetHelperServices()

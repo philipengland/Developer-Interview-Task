@@ -173,6 +173,7 @@
     <Compile Include="Services\HelperService\Concrete\HelperServiceCardService.cs" />
     <Compile Include="Services\HelperService\Interfaces\IHelperServiceCardService.cs" />
     <Compile Include="Services\HelperService\Interfaces\IHelperServiceCardHelper.cs" />
+    <Compile Include="Services\HelperService\Interfaces\IHelperServiceCardServiceAttributes.cs" />
     <Compile Include="Services\Weather\Concrete\WeatherService.cs" />
     <Compile Include="Services\Weather\Interfaces\IWeatherService.cs" />
   </ItemGroup>

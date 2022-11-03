@@ -40,7 +40,7 @@ namespace InterviewTask.OpenWeather.Services
 
         public async Task<IList<Coordinates>> GetCoordinatesAsync(string city)
         {
-            var response = await restClient.GetJsonRequest(url, $"/geo/1.0/direct?q={city}&limit=5&appid={apiKey}");
+            var response = await restClient.GetJsonRequest(url, $"/geo/1.0/direct?q={city},GB&limit=5&appid={apiKey}");
             if (response.IsSuccessStatusCode)
             {
                 return await response.Content.ReadAsAsync<IList<Coordinates>>();

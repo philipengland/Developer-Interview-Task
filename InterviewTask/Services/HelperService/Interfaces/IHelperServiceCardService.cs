@@ -1,11 +1,10 @@
 ﻿using InterviewTask.Models;
-using System;
+using InterviewTask.Services.HelperService.Interfaces;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace InterviewTask.Services
 {
-    public interface IHelperServiceCardService
+    public interface IHelperServiceCardService : IHelperServiceCardServiceAttributes
     {
         /// <summary>Gets the list of Helper Service Cards to display on the Helper Service Page</summary>
         /// <returns>
@@ -13,10 +12,6 @@ namespace InterviewTask.Services
         /// </returns>
         IEnumerable<HelperServiceCardModel> Get();
 
-        /// <summary>Gets the list of Helper Service Cards, appended with the current Weather Forecat to display on the Helper Service Page</summary>
-        /// <returns>
-        ///   <br />
-        /// </returns>
-        Task<IEnumerable<HelperServiceCardModel>> GetWithWeatherAsync();
+
     }
 }
